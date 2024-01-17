@@ -49,12 +49,22 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun ReplyAppCompactPreview() {
+fun ReplyAppMediumPreview() {
     ReplyTheme {
         Surface {
             ReplyApp(
-                windowSize = WindowWidthSizeClass.Compact,
+                windowSize = WindowWidthSizeClass.Medium,
             )
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 720)
+@Composable
+fun ReplyAppExpandedPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }
